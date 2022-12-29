@@ -28,27 +28,27 @@ public class Welcome extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        lbl3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        namaApp = new javax.swing.JLabel();
+        slogan = new javax.swing.JLabel();
+        nextButton = new javax.swing.JButton();
+        iconMesinCuci = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(0, 65, 110));
 
-        lbl3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        lbl3.setForeground(new java.awt.Color(0, 204, 204));
-        lbl3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbl3.setText("Daily Clean");
+        namaApp.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        namaApp.setForeground(new java.awt.Color(150, 210, 217));
+        namaApp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        namaApp.setText("Daily Clean");
 
-        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
-        jLabel1.setText("Make Your Heart Clean With Clean Laundry");
+        slogan.setForeground(new java.awt.Color(150, 210, 217));
+        slogan.setText("Make Your Heart Clean With Clean Laundry");
 
-        jButton1.setBackground(new java.awt.Color(0, 65, 110));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\round_navigate_next_white_36dp.png")); // NOI18N
+        nextButton.setBackground(new java.awt.Color(0, 65, 110));
+        nextButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\round_navigate_next_white_36dp.png")); // NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\palingkecil.png")); // NOI18N
+        iconMesinCuci.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\palingkecil.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -59,25 +59,25 @@ public class Welcome extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                            .addComponent(lbl3)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
+                            .addComponent(namaApp)
+                            .addComponent(slogan)
+                            .addComponent(iconMesinCuci))
                         .addGap(35, 35, 35))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(nextButton)
                         .addGap(26, 26, 26))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(63, 63, 63)
-                .addComponent(lbl3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(namaApp, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(iconMesinCuci, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel1)
+                .addComponent(slogan)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(nextButton)
                 .addGap(23, 23, 23))
         );
 
@@ -132,10 +132,10 @@ public class Welcome extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel iconMesinCuci;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel lbl3;
+    private javax.swing.JLabel namaApp;
+    private javax.swing.JButton nextButton;
+    private javax.swing.JLabel slogan;
     // End of variables declaration//GEN-END:variables
 }
