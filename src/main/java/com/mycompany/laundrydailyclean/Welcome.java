@@ -47,6 +47,7 @@ public class Welcome extends javax.swing.JFrame {
 
         nextButton.setBackground(new java.awt.Color(0, 65, 110));
         nextButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\round_navigate_next_white_36dp.png")); // NOI18N
+        nextButton.setBorderPainted(false);
 
         iconMesinCuci.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\palingkecil.png")); // NOI18N
 
