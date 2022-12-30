@@ -30,13 +30,13 @@ public class NotaPembayaran extends javax.swing.JFrame {
         lingkaranbawah = new javax.swing.JLabel();
         lingkaranatas = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        nameLabel = new javax.swing.JLabel();
+        namaLabel = new javax.swing.JLabel();
         alamatLabel = new javax.swing.JLabel();
         beratLabel = new javax.swing.JLabel();
         hargalabel = new javax.swing.JLabel();
         tipelaundriLabel = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         finishbutton = new javax.swing.JButton();
+        noHPLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,30 +53,25 @@ public class NotaPembayaran extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 65, 110));
         jLabel3.setText("Payment Note");
 
-        nameLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        nameLabel.setForeground(new java.awt.Color(0, 65, 110));
-        nameLabel.setText("Name:");
+        namaLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        namaLabel.setForeground(new java.awt.Color(0, 65, 110));
+        namaLabel.setText("Name");
 
         alamatLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         alamatLabel.setForeground(new java.awt.Color(0, 65, 110));
-        alamatLabel.setText("Address:");
+        alamatLabel.setText("Address");
 
         beratLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         beratLabel.setForeground(new java.awt.Color(0, 65, 110));
-        beratLabel.setText("Heavy :");
+        beratLabel.setText("Heavy");
 
         hargalabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         hargalabel.setForeground(new java.awt.Color(0, 65, 110));
-        hargalabel.setText("Total cost :");
+        hargalabel.setText("Total Cost");
 
         tipelaundriLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tipelaundriLabel.setForeground(new java.awt.Color(0, 65, 110));
-        tipelaundriLabel.setText("Type laundry :");
-
-        jLabel9.setBackground(new java.awt.Color(0, 65, 110));
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 65, 110));
-        jLabel9.setText("__________________________________________________");
+        tipelaundriLabel.setText("Type Laundry");
 
         finishbutton.setBackground(new java.awt.Color(0, 65, 110));
         finishbutton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -88,32 +83,38 @@ public class NotaPembayaran extends javax.swing.JFrame {
             }
         });
 
+        noHPLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        noHPLabel.setForeground(new java.awt.Color(0, 65, 110));
+        noHPLabel.setText("Phone");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(lingkaranbawah, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nameLabel)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(alamatLabel)
+                            .addComponent(namaLabel)
+                            .addComponent(noHPLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lingkaranatas, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(finishbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(hargalabel)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(alamatLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(beratLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tipelaundriLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tipelaundriLabel)
+                                    .addComponent(hargalabel)
+                                    .addComponent(beratLabel))
+                                .addGap(150, 150, 150)))
                         .addContainerGap(49, Short.MAX_VALUE))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(lingkaranbawah, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,21 +122,21 @@ public class NotaPembayaran extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lingkaranatas, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
-                        .addComponent(nameLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(alamatLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9)
-                .addGap(18, 18, 18)
+                        .addContainerGap()
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(namaLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(alamatLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(noHPLabel)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addComponent(beratLabel)
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tipelaundriLabel)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(hargalabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addGap(68, 68, 68)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lingkaranbawah, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -202,11 +203,11 @@ public class NotaPembayaran extends javax.swing.JFrame {
     private javax.swing.JButton finishbutton;
     private javax.swing.JLabel hargalabel;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lingkaranatas;
     private javax.swing.JLabel lingkaranbawah;
-    private javax.swing.JLabel nameLabel;
+    private javax.swing.JLabel namaLabel;
+    private javax.swing.JLabel noHPLabel;
     private javax.swing.JLabel tipelaundriLabel;
     // End of variables declaration//GEN-END:variables
 }
