@@ -17,6 +17,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
         initComponents();
     }
     int harga;
+    int setrika;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -87,7 +88,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
         });
 
         priceLabel.setForeground(new java.awt.Color(255, 255, 255));
-        priceLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        priceLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         priceLabel.setText("Price will shown here after calculate");
 
         tipeLaundry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Wash Only", "Wash + Ironing" }));
@@ -102,48 +103,58 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
 
         backButton.setBackground(new java.awt.Color(0, 65, 110));
         backButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\outline_navigate_before_white_36dp.png")); // NOI18N
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
 
         nextButton.setBackground(new java.awt.Color(0, 65, 110));
         nextButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\round_navigate_next_white_36dp.png")); // NOI18N
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(112, 112, 112)
+                .addComponent(iconDollar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(backButton)
-                        .addGap(35, 35, 35)
                         .addComponent(tombolCalculate)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                        .addComponent(nextButton))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tipeLaundry, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jenisLaundry, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(inputKilo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(hargaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(35, 35, 35))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(iconDollar)
-                        .addGap(110, 110, 110))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(priceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56))))
+                            .addComponent(priceLabel)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel6)
+                                        .addComponent(jLabel4)
+                                        .addComponent(jLabel3)
+                                        .addComponent(jLabel2))
+                                    .addGap(45, 45, 45)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(tipeLaundry, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jenisLaundry, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(inputKilo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(hargaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addContainerGap(35, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,74 +162,88 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addComponent(iconDollar)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel4)
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel6))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jenisLaundry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(hargaLabel))
-                        .addGap(12, 12, 12)
-                        .addComponent(inputKilo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(tipeLaundry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jenisLaundry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(hargaLabel))
+                .addGap(15, 15, 15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputKilo))
                 .addGap(18, 18, 18)
-                .addComponent(priceLabel)
-                .addGap(61, 61, 61)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(tipeLaundry, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addComponent(priceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tombolCalculate)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(nextButton)
-                        .addComponent(backButton))
-                    .addComponent(tombolCalculate))
-                .addContainerGap(35, Short.MAX_VALUE))
+                    .addComponent(nextButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(backButton, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(35, 35, 35))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jenisLaundryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisLaundryActionPerformed
-        if (jenisLaundry.getSelectedItem().toString().equalsIgnoreCase("Clothes")){
-            hargaLabel.setText("6.000");harga=6000;} else if (jenisLaundry.getSelectedItem().toString().equalsIgnoreCase("Bedcover")){
-            hargaLabel.setText("8.000");harga=8000;} else if (jenisLaundry.getSelectedItem().toString().equalsIgnoreCase("Footwear")){
-            hargaLabel.setText("7.000");harga=7000;} else if (jenisLaundry.getSelectedItem().toString().equalsIgnoreCase("Rug")){
-            hargaLabel.setText("10.000");harga=10000;}      // TODO add your handling code here:
-    }//GEN-LAST:event_jenisLaundryActionPerformed
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        OpsiLayanan back = new OpsiLayanan();
+        back.setVisible(true);
+        back.setLocationRelativeTo(null);
+        this.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonActionPerformed
 
-    private void inputKiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputKiloActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputKiloActionPerformed
+    private void tipeLaundryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipeLaundryActionPerformed
+        if (tipeLaundry.getSelectedItem().toString().equalsIgnoreCase("Wash + Ironing")){
+            setrika = 2000; priceLabel.setText("Price will shown here after calculate");}
+        else if (tipeLaundry.getSelectedItem().toString().equalsIgnoreCase("Wash Only")){
+            setrika = 0; priceLabel.setText("Price will shown here after calculate");}// TODO add your handling code here:
+    }//GEN-LAST:event_tipeLaundryActionPerformed
 
     private void tombolCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolCalculateActionPerformed
         try {
             String input = inputKilo.getText();
             int inputUser = Integer.parseInt(input);
             int hargaFinal = inputUser * harga;
+            hargaFinal += (setrika * inputUser);
             priceLabel.setText("Price: Rp." + hargaFinal);}
-        catch (NumberFormatException e){priceLabel.setText("Input heavy total!");}//TODO add your handling code here:
+        catch (NumberFormatException e){
+            priceLabel.setText("Input heavy field first!");
+        }//TODO add your handling code here:
     }//GEN-LAST:event_tombolCalculateActionPerformed
 
-    private void tipeLaundryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipeLaundryActionPerformed
+    private void inputKiloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputKiloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tipeLaundryActionPerformed
+    }//GEN-LAST:event_inputKiloActionPerformed
+
+    private void jenisLaundryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisLaundryActionPerformed
+        if (jenisLaundry.getSelectedItem().toString().equalsIgnoreCase("Clothes")){
+            hargaLabel.setText("6.000");harga=6000;} else if (jenisLaundry.getSelectedItem().toString().equalsIgnoreCase("Bedcover")){
+            hargaLabel.setText("8.000");harga=8000;} else if (jenisLaundry.getSelectedItem().toString().equalsIgnoreCase("Footwear")){
+            hargaLabel.setText("7.000");harga=7000;} else if (jenisLaundry.getSelectedItem().toString().equalsIgnoreCase("Rug")){
+            hargaLabel.setText("10.000");harga=10000;}// TODO add your handling code here:
+    }//GEN-LAST:event_jenisLaundryActionPerformed
+
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nextButtonActionPerformed
 
     /**
      * @param args the command line arguments
