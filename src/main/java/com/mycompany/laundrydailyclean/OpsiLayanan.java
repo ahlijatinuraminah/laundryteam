@@ -31,7 +31,6 @@ public class OpsiLayanan extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         nextToBio = new javax.swing.JButton();
-        nextToMembership = new javax.swing.JButton();
         backToWelcome = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,15 +56,6 @@ public class OpsiLayanan extends javax.swing.JFrame {
             }
         });
 
-        nextToMembership.setBackground(new java.awt.Color(0, 65, 110));
-        nextToMembership.setForeground(new java.awt.Color(150, 210, 217));
-        nextToMembership.setText("SIgn Up For Member");
-        nextToMembership.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nextToMembershipActionPerformed(evt);
-            }
-        });
-
         backToWelcome.setBackground(new java.awt.Color(0, 65, 110));
         backToWelcome.setForeground(new java.awt.Color(150, 210, 217));
         backToWelcome.setText("Back To Welcome");
@@ -85,7 +75,6 @@ public class OpsiLayanan extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addComponent(nextToBio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(nextToMembership, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(backToWelcome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(56, 56, 56))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -102,11 +91,9 @@ public class OpsiLayanan extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(41, 41, 41)
                 .addComponent(nextToBio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(nextToMembership)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(backToWelcome)
                 .addGap(26, 26, 26))
         );
@@ -131,13 +118,6 @@ public class OpsiLayanan extends javax.swing.JFrame {
     nextBio.setLocationRelativeTo(null);
     this.setVisible(false);    
     }//GEN-LAST:event_nextToBioActionPerformed
-
-    private void nextToMembershipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextToMembershipActionPerformed
-    DaftarMembership nextMember = new DaftarMembership();
-    nextMember.setVisible(true);
-    nextMember.setLocationRelativeTo(null);
-    this.setVisible(false);    
-    }//GEN-LAST:event_nextToMembershipActionPerformed
 
     private void backToWelcomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToWelcomeActionPerformed
     Welcome back = new Welcome();
@@ -188,6 +168,5 @@ public class OpsiLayanan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton nextToBio;
-    private javax.swing.JButton nextToMembership;
     // End of variables declaration//GEN-END:variables
 }
