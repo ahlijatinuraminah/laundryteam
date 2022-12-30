@@ -35,7 +35,7 @@ public class BiodataCustomer extends javax.swing.JFrame {
         customerBioLabel = new javax.swing.JLabel();
         firstNameLabel = new javax.swing.JLabel();
         inputFirstName = new javax.swing.JTextField();
-        beforeButton = new javax.swing.JButton();
+        backButton = new javax.swing.JButton();
         nextButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
@@ -83,11 +83,21 @@ public class BiodataCustomer extends javax.swing.JFrame {
         inputFirstName.setForeground(new java.awt.Color(150, 210, 217));
         inputFirstName.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        beforeButton.setBackground(new java.awt.Color(0, 65, 110));
-        beforeButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\outline_navigate_before_white_36dp.png")); // NOI18N
+        backButton.setBackground(new java.awt.Color(0, 65, 110));
+        backButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\outline_navigate_before_white_36dp.png")); // NOI18N
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
 
         nextButton.setBackground(new java.awt.Color(0, 65, 110));
         nextButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\round_navigate_next_white_36dp.png")); // NOI18N
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextButtonActionPerformed(evt);
+            }
+        });
 
         jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\biodataIcon.png")); // NOI18N
 
@@ -97,7 +107,7 @@ public class BiodataCustomer extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(beforeButton)
+                .addComponent(backButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(nextButton)
                 .addGap(29, 29, 29))
@@ -144,7 +154,7 @@ public class BiodataCustomer extends javax.swing.JFrame {
                 .addComponent(customerBioLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 188, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(beforeButton)
+                    .addComponent(backButton)
                     .addComponent(nextButton))
                 .addGap(23, 23, 23))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,6 +184,20 @@ public class BiodataCustomer extends javax.swing.JFrame {
     private void inputAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputAddressActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_inputAddressActionPerformed
+
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+    OpsiLayanan back = new OpsiLayanan();
+    back.setVisible(true);
+    back.setLocationRelativeTo(null);
+    this.setVisible(false);        // TODO add your handling code here:
+    }//GEN-LAST:event_backButtonActionPerformed
+
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
+    KalkulasiHargaLaundry next = new KalkulasiHargaLaundry();
+    next.setVisible(true);
+    next.setLocationRelativeTo(null);
+    this.setVisible(false);            // TODO add your handling code here:
+    }//GEN-LAST:event_nextButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,7 +237,7 @@ public class BiodataCustomer extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LastNameLabel;
     private javax.swing.JLabel addressLabel;
-    private javax.swing.JButton beforeButton;
+    private javax.swing.JButton backButton;
     private javax.swing.JLabel customerBioLabel;
     private javax.swing.JLabel firstNameLabel;
     private javax.swing.JTextField inputAddress;
