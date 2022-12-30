@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.laundrydailyclean;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Lenovo
@@ -18,6 +18,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
     }
     int harga;
     int setrika;
+    int hargaFinal;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -221,7 +222,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
         try {
             String input = inputKilo.getText();
             int inputUser = Integer.parseInt(input);
-            int hargaFinal = inputUser * harga;
+            hargaFinal = inputUser * harga;
             hargaFinal += (setrika * inputUser);
             priceLabel.setText("Price: Rp." + hargaFinal);}
         catch (NumberFormatException e){
@@ -242,7 +243,10 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
     }//GEN-LAST:event_jenisLaundryActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
-        // TODO add your handling code here:
+    NotaPembayaran next = new NotaPembayaran();
+    this.setVisible(false);
+    next.setVisible(true);
+    next.setLocationRelativeTo(null);
     }//GEN-LAST:event_nextButtonActionPerformed
 
     /**
