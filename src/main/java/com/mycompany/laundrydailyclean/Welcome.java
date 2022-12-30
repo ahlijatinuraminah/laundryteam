@@ -104,7 +104,8 @@ public class Welcome extends javax.swing.JFrame {
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
     OpsiLayanan next = new OpsiLayanan();
     next.setVisible(true);
-    next.setLocationRelativeTo(null);        // TODO add your handling code here:
+    next.setLocationRelativeTo(null);
+    this.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_nextButtonActionPerformed
 
     /**
