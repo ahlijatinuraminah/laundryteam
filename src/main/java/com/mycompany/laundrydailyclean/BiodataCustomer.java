@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.laundrydailyclean;
-
+import javax.swing.JOptionPane;
 /**
  *
  * @author Lenovo
@@ -192,10 +192,10 @@ public class BiodataCustomer extends javax.swing.JFrame {
     }//GEN-LAST:event_backButtonActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
-    //Buat variabel
-    NotaPembayaran sendData = new NotaPembayaran();
-
-    
+//  Cek biodata
+    if (inputFirstName.getText().equalsIgnoreCase("") && inputLastName.getText().equalsIgnoreCase("")){
+    JOptionPane.showMessageDialog(this, "Please input name at least one form!"); 
+    } else {
     //Pindah Frame
     KalkulasiHargaLaundry next = new KalkulasiHargaLaundry();
     next.setVisible(true);
@@ -204,7 +204,7 @@ public class BiodataCustomer extends javax.swing.JFrame {
     //Titip data buat diteruskan ke NotaPembayaran.java
     next.titipNama = ": " + inputFirstName.getText() + " " + inputLastName.getText();
     next.titipAlamat = (": " + inputAddress.getText());
-    next.titipHP = (": " + inputPhone.getText());
+    next.titipHP = (": " + inputPhone.getText());}
     }//GEN-LAST:event_nextButtonActionPerformed
 
     private void inputLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputLastNameActionPerformed
