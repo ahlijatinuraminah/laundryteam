@@ -16,9 +16,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
     public KalkulasiHargaLaundry() {
         initComponents();
     }
-    int harga;
-    int setrika;
-    int hargaFinal;
+    int harga, setrika, hargaFinal, inputUser;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -221,7 +219,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
     private void tombolCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tombolCalculateActionPerformed
         try {
             String input = inputKilo.getText();
-            int inputUser = Integer.parseInt(input);
+            inputUser = Integer.parseInt(input);
             hargaFinal = inputUser * harga;
             hargaFinal += (setrika * inputUser);
             priceLabel.setText("Price: Rp." + hargaFinal);}
@@ -244,6 +242,14 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
     NotaPembayaran next = new NotaPembayaran();
+    //Transfer Variabel
+    next.outputBerat.setText(": " + inputKilo.getText() + " Kg");
+    next.outputTipeLaundri.setText(": " + tipeLaundry.getSelectedItem().toString() + ", " + jenisLaundry.getSelectedItem().toString());
+
+    String outputharga = "" + hargaFinal;
+    next.outputHarga.setText(": Rp. " + outputharga);
+
+    //Pindah Frame
     this.setVisible(false);
     next.setVisible(true);
     next.setLocationRelativeTo(null);
