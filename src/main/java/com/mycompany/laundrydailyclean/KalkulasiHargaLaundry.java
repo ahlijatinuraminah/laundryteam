@@ -53,6 +53,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
         iconDollar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\cash.png")); // NOI18N
 
         jenisLaundry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Clothes", "Bedcover", "Footwear", "Rug" }));
+        jenisLaundry.setToolTipText("Select your laundry");
         jenisLaundry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jenisLaundryActionPerformed(evt);
@@ -66,6 +67,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
         jLabel3.setText("Heavy");
 
         inputKilo.setText("kg");
+        inputKilo.setToolTipText("Input heavy of the laundry");
         inputKilo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputKiloActionPerformed(evt);
@@ -79,7 +81,6 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
         jLabel5.setText("Rp.");
 
         hargaLabel.setForeground(new java.awt.Color(255, 255, 255));
-        hargaLabel.setText("0000");
 
         tombolCalculate.setText("Calculate");
         tombolCalculate.addActionListener(new java.awt.event.ActionListener() {
@@ -93,6 +94,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
         priceLabel.setText("Price will shown here after calculate");
 
         tipeLaundry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Wash Only", "Wash + Ironing" }));
+        tipeLaundry.setToolTipText("Select the service");
         tipeLaundry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tipeLaundryActionPerformed(evt);
@@ -224,7 +226,11 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
             inputUser = Integer.parseInt(input);
             hargaFinal = inputUser * harga;
             hargaFinal += (setrika * inputUser);
-            priceLabel.setText("Price: Rp." + hargaFinal);}
+            if (hargaFinal == 0){
+                priceLabel.setText("Please choose Laundry box!");
+            } else if (hargaFinal == 2000){
+                priceLabel.setText("Please choose Laundry box!");
+            } else priceLabel.setText("Price: Rp." + hargaFinal);}
         catch (NumberFormatException e){
             priceLabel.setText("Input heavy field first!");
         }//TODO add your handling code here:
