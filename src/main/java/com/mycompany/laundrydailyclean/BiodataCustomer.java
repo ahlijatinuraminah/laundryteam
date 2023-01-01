@@ -16,14 +16,6 @@ public class BiodataCustomer extends javax.swing.JFrame {
     public BiodataCustomer() {
         initComponents();
     }
-    String namadepan, namatengah, alamat, nomorhape;
-    /**
-    * namadepan.setText(getText(inputFirstName));
-    * namatengah.setText(getText(inputLastName));
-    * alamat.setText(getText(inputAddress));
-    * nomorhape.setText(getText(inputPhone));
-    * NotaPembayaran data = new NotaPembayaran(namadepan, namatengah, alamat, nomorhape);
-     */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -49,8 +41,12 @@ public class BiodataCustomer extends javax.swing.JFrame {
 
         inputLastName.setBackground(new java.awt.Color(0, 65, 110));
         inputLastName.setForeground(new java.awt.Color(150, 210, 217));
-        inputLastName.setText("(Optional)");
         inputLastName.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        inputLastName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputLastNameActionPerformed(evt);
+            }
+        });
 
         inputAddress.setBackground(new java.awt.Color(0, 65, 110));
         inputAddress.setForeground(new java.awt.Color(150, 210, 217));
@@ -196,11 +192,24 @@ public class BiodataCustomer extends javax.swing.JFrame {
     }//GEN-LAST:event_backButtonActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
+    //Buat variabel
+    NotaPembayaran sendData = new NotaPembayaran();
+
+    
+    //Pindah Frame
     KalkulasiHargaLaundry next = new KalkulasiHargaLaundry();
     next.setVisible(true);
     next.setLocationRelativeTo(null);
-    this.setVisible(false);            // TODO add your handling code here:
+    this.setVisible(false);
+    //Titip data buat diteruskan ke NotaPembayaran.java
+    next.titipNama = ": " + inputFirstName.getText() + " " + inputLastName.getText();
+    next.titipAlamat = (": " + inputAddress.getText());
+    next.titipHP = (": " + inputPhone.getText());
     }//GEN-LAST:event_nextButtonActionPerformed
+
+    private void inputLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputLastNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputLastNameActionPerformed
 
     /**
      * @param args the command line arguments

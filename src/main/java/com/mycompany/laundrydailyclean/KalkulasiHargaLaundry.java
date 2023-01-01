@@ -13,10 +13,12 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
     /**
      * Creates new form KalkulasiHargaLaundry
      */
+    String titipNama = "", titipAlamat = "", titipHP = "";
     public KalkulasiHargaLaundry() {
         initComponents();
     }
     int harga, setrika, hargaFinal, inputUser;
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -241,8 +243,13 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
     }//GEN-LAST:event_jenisLaundryActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
-    NotaPembayaran next = new NotaPembayaran();
     //Transfer Variabel
+    NotaPembayaran next = new NotaPembayaran();
+    //Biodata Customer
+    next.outputNama.setText(titipNama);
+    next.outputAlamat.setText(titipAlamat);
+    next.outputNomorHP.setText(titipHP);
+    //Nota Harga
     next.outputBerat.setText(": " + inputKilo.getText() + " Kg");
     next.outputTipeLaundri.setText(": " + tipeLaundry.getSelectedItem().toString() + ", " + jenisLaundry.getSelectedItem().toString());
 
