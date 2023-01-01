@@ -4,6 +4,8 @@
  */
 package com.mycompany.laundrydailyclean;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Lenovo
@@ -210,7 +212,18 @@ public class NotaPembayaran extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void finishbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finishbuttonActionPerformed
-        // TODO add your handling code here:
+    int confirm = JOptionPane.showOptionDialog(this, "Are You Sure?", "Finish Process", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,null,null );
+    switch (confirm){
+        case JOptionPane.YES_OPTION: //Iya
+    //Pindah Frame
+        this.setVisible(false);
+        OpsiLayanan backto = new OpsiLayanan();
+        backto.setVisible(true);
+        backto.setLocationRelativeTo(null);
+            break;
+        case JOptionPane.NO_OPTION:
+            break;
+    }        // TODO add your handling code here:
     }//GEN-LAST:event_finishbuttonActionPerformed
 
     /**
