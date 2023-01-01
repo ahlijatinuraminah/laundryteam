@@ -249,23 +249,30 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
     }//GEN-LAST:event_jenisLaundryActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
+    int confirm = JOptionPane.showOptionDialog(this, "Proceed to print Payment Note?", "Continue", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,null,null );
+    switch (confirm){
+        case JOptionPane.YES_OPTION: //Iya
     //Transfer Variabel
-    NotaPembayaran next = new NotaPembayaran();
+        NotaPembayaran next = new NotaPembayaran();
     //Biodata Customer
-    next.outputNama.setText(titipNama);
-    next.outputAlamat.setText(titipAlamat);
-    next.outputNomorHP.setText(titipHP);
+        next.outputNama.setText(titipNama);
+        next.outputAlamat.setText(titipAlamat);
+        next.outputNomorHP.setText(titipHP);
     //Nota Harga
-    next.outputBerat.setText(": " + inputKilo.getText() + " Kg");
-    next.outputTipeLaundri.setText(": " + tipeLaundry.getSelectedItem().toString() + ", " + jenisLaundry.getSelectedItem().toString());
+        next.outputBerat.setText(": " + inputKilo.getText() + " Kg");
+        next.outputTipeLaundri.setText(": " + tipeLaundry.getSelectedItem().toString() + ", " + jenisLaundry.getSelectedItem().toString());
 
-    String outputharga = "" + hargaFinal;
-    next.outputHarga.setText(": Rp. " + outputharga);
+        String outputharga = "" + hargaFinal;
+        next.outputHarga.setText(": Rp. " + outputharga);
 
     //Pindah Frame
-    this.setVisible(false);
-    next.setVisible(true);
-    next.setLocationRelativeTo(null);
+        this.setVisible(false);
+        next.setVisible(true);
+        next.setLocationRelativeTo(null);
+            break;
+        case JOptionPane.NO_OPTION:
+            break;
+    }
     }//GEN-LAST:event_nextButtonActionPerformed
 
     /**
