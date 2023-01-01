@@ -5,12 +5,14 @@
  */
 package com.mycompany.laundrydailyclean;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ahlij
  */
 public class Welcome extends javax.swing.JFrame {
-
+String username = "admin", password = "DailyClean";
     /**
      * Creates new form Welcome
      */
@@ -32,6 +34,8 @@ public class Welcome extends javax.swing.JFrame {
         slogan = new javax.swing.JLabel();
         nextButton = new javax.swing.JButton();
         iconMesinCuci = new javax.swing.JLabel();
+        inputUser = new javax.swing.JTextField();
+        inputPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,6 +60,24 @@ public class Welcome extends javax.swing.JFrame {
 
         iconMesinCuci.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\palingkecil.png")); // NOI18N
 
+        inputUser.setForeground(new java.awt.Color(0, 65, 110));
+        inputUser.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        inputUser.setText("admin");
+        inputUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputUserActionPerformed(evt);
+            }
+        });
+
+        inputPassword.setForeground(new java.awt.Color(0, 65, 110));
+        inputPassword.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        inputPassword.setText("jPasswordField1");
+        inputPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputPasswordActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -67,7 +89,9 @@ public class Welcome extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                             .addComponent(namaApp)
                             .addComponent(slogan)
-                            .addComponent(iconMesinCuci))
+                            .addComponent(iconMesinCuci)
+                            .addComponent(inputUser, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(inputPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(35, 35, 35))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(nextButton)
@@ -82,7 +106,11 @@ public class Welcome extends javax.swing.JFrame {
                 .addComponent(iconMesinCuci, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(slogan)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(inputUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(inputPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addComponent(nextButton)
                 .addGap(23, 23, 23))
         );
@@ -102,11 +130,29 @@ public class Welcome extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
+    String checkUser, checkPass;
+    checkUser = inputUser.getText(); 
+    checkPass = new String (inputPassword.getPassword());
+    
+    if (checkUser.equalsIgnoreCase(username) && checkPass.equalsIgnoreCase(password)){
     OpsiLayanan next = new OpsiLayanan();
     next.setVisible(true);
     next.setLocationRelativeTo(null);
-    this.setVisible(false);// TODO add your handling code here:
+    this.setVisible(false);
+    } else {
+    JOptionPane.showMessageDialog(null, "Username / Password is wrong!", "Login", JOptionPane.ERROR_MESSAGE);
+    inputUser.setText("");
+    inputPassword.setText("");}
+
     }//GEN-LAST:event_nextButtonActionPerformed
+
+    private void inputUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputUserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputUserActionPerformed
+
+    private void inputPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputPasswordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,6 +192,8 @@ public class Welcome extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel iconMesinCuci;
+    private javax.swing.JPasswordField inputPassword;
+    private javax.swing.JTextField inputUser;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel namaApp;
     private javax.swing.JButton nextButton;
