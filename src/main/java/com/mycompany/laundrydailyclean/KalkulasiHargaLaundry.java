@@ -246,7 +246,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
     }//GEN-LAST:event_jenisLaundryActionPerformed
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
-    int confirm = JOptionPane.showOptionDialog(this, "Proceed to print Payment Note?", "Continue", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,null,null );
+    int confirm = JOptionPane.showOptionDialog(this, "Proceed to print Payment Note? Make sure that price had shown", "Continue", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null,null,null );
     switch (confirm){
         case JOptionPane.YES_OPTION: //Iya
     //Transfer Variabel
