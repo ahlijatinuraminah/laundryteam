@@ -77,7 +77,7 @@
                   <Component id="inputUser" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="inputPassword" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="17" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="nextButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               </Group>
@@ -110,6 +110,9 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="6e" green="41" red="0" type="rgb"/>
             </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\Lenovo\OneDrive\Documents\PROJECT AKHIR\New Project\laundryteam3\src\main\java\Image\round_navigate_next_white_36dp.png"/>
+            </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
           </Properties>
           <Events>
@@ -117,6 +120,11 @@
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="iconMesinCuci">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\Lenovo\OneDrive\Documents\PROJECT AKHIR\New Project\laundryteam3\src\main\java\Image\palingkecil.png"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="inputUser">
           <Properties>

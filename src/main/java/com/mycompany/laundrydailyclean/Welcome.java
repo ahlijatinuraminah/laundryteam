@@ -50,12 +50,15 @@ String username = "admin", password = "DailyClean";
         slogan.setText("Make Your Heart Clean With Clean Laundry");
 
         nextButton.setBackground(new java.awt.Color(0, 65, 110));
+        nextButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\round_navigate_next_white_36dp.png")); // NOI18N
         nextButton.setBorderPainted(false);
         nextButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextButtonActionPerformed(evt);
             }
         });
+
+        iconMesinCuci.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\palingkecil.png")); // NOI18N
 
         inputUser.setForeground(new java.awt.Color(0, 65, 110));
         inputUser.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -107,7 +110,7 @@ String username = "admin", password = "DailyClean";
                 .addComponent(inputUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(inputPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(nextButton)
                 .addGap(23, 23, 23))
         );
