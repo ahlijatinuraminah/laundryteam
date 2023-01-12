@@ -50,7 +50,6 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
 
         iconDollar.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         iconDollar.setForeground(new java.awt.Color(255, 255, 255));
-        iconDollar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\cash.png")); // NOI18N
 
         jenisLaundry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Clothes", "Bedcover", "Footwear", "Rug" }));
         jenisLaundry.setToolTipText("Select your laundry");
@@ -64,7 +63,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
         jLabel2.setText("Laundry");
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Heavy");
+        jLabel3.setText("Weight");
 
         inputKilo.setText("kg");
         inputKilo.setToolTipText("Input heavy of the laundry");
@@ -105,7 +104,6 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
         jLabel6.setText("Type");
 
         backButton.setBackground(new java.awt.Color(0, 65, 110));
-        backButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\outline_navigate_before_white_36dp.png")); // NOI18N
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
@@ -113,7 +111,6 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
         });
 
         nextButton.setBackground(new java.awt.Color(0, 65, 110));
-        nextButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\round_navigate_next_white_36dp.png")); // NOI18N
         nextButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextButtonActionPerformed(evt);
@@ -232,7 +229,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
                 priceLabel.setText("Please choose Laundry box!");
             } else priceLabel.setText("Price: Rp." + hargaFinal);}
         catch (NumberFormatException e){
-            priceLabel.setText("Input heavy field first!");
+            priceLabel.setText("Input weight field first!");
         }//TODO add your handling code here:
     }//GEN-LAST:event_tombolCalculateActionPerformed
 
