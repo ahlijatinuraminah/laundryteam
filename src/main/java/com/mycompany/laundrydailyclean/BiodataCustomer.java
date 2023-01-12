@@ -193,8 +193,9 @@ public class BiodataCustomer extends javax.swing.JFrame {
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
 //  Cek biodata
-    if (inputFirstName.getText().equalsIgnoreCase("") && inputLastName.getText().equalsIgnoreCase("") && (inputAddress.getText().equalsIgnoreCase("") || inputPhone.getText().equalsIgnoreCase(""))){
-    JOptionPane.showMessageDialog(this, "Please input name at least one form!"); 
+    if ((inputFirstName.getText().equalsIgnoreCase("") || inputLastName.getText().equalsIgnoreCase("")) ||
+             inputPhone.getText().equalsIgnoreCase("")){
+    JOptionPane.showMessageDialog(this, "Name & Phone field must be inputted!"); 
     } else {
     //Pindah Frame
     KalkulasiHargaLaundry next = new KalkulasiHargaLaundry();
