@@ -117,7 +117,7 @@
                       <Component id="tipeLaundry" alignment="2" min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="jLabel6" alignment="2" min="-2" pref="16" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Component id="priceLabel" min="-2" pref="16" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="tombolCalculate" min="-2" max="-2" attributes="0"/>
@@ -256,6 +256,9 @@
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="6e" green="41" red="0" type="rgb"/>
             </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\Lenovo\OneDrive\Documents\PROJECT AKHIR\New Project\laundryteam3\src\main\java\Image\outline_navigate_before_white_36dp.png"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backButtonActionPerformed"/>
@@ -265,6 +268,9 @@
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="6e" green="41" red="0" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="2" name="C:\Users\Lenovo\OneDrive\Documents\PROJECT AKHIR\New Project\laundryteam3\src\main\java\Image\round_navigate_next_white_36dp.png"/>
             </Property>
           </Properties>
           <Events>

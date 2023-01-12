@@ -104,6 +104,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
         jLabel6.setText("Type");
 
         backButton.setBackground(new java.awt.Color(0, 65, 110));
+        backButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\outline_navigate_before_white_36dp.png")); // NOI18N
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
@@ -111,6 +112,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
         });
 
         nextButton.setBackground(new java.awt.Color(0, 65, 110));
+        nextButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lenovo\\OneDrive\\Documents\\PROJECT AKHIR\\New Project\\laundryteam3\\src\\main\\java\\Image\\round_navigate_next_white_36dp.png")); // NOI18N
         nextButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextButtonActionPerformed(evt);
@@ -178,7 +180,7 @@ public class KalkulasiHargaLaundry extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(tipeLaundry, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(priceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tombolCalculate)
